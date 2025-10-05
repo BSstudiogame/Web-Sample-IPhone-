@@ -1,0 +1,345 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.corpus{
+  width: 300px;
+  height: 600px;
+  background: rgb(216, 98, 30);
+  border-radius: 39px;
+  position: fixed;
+  border: solid, 0.5px, rgb(88, 47, 0);
+}
+
+.ButtonOnOff{
+  width: 4px;
+  height: 68px;
+  background: rgb(173, 79, 25);
+  border-radius: 12px;
+  position: absolute;
+  left: 299px;
+  top: 180px;
+  cursor: pointer;
+}
+
+.screen{
+  width: 282px;
+  height: 585px;
+  border-radius: 35px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  left: 1.75%;
+  top: 0.7%;
+  border: solid, 4px, black;
+}
+
+.island{
+  width: 80px;
+  height: 25px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 14px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+    position: absolute;
+    left: 35%;
+    top: 1.07%;
+}
+.island:active {
+  transform: scale(1.1);
+}
+
+.background{
+  width: 282px;
+  height: 585px;
+  background-image: url("../phone/one3.png");
+  background-size: cover;    
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+}
+
+.background.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
+
+/* Это батарея там и зарядка */
+
+.up-element{
+  position: absolute;
+  left: 210px;
+  top: 7.8px;
+  display: flex;
+}
+
+.battery-show{
+  font-size: 20px;
+  color: rgba(216, 216, 216, 0.568);
+}
+
+.wifi-show{
+  margin-right: 10px;
+  margin-top: 3px;
+  font-size: 13px;
+  color: rgba(240, 255, 255, 0.815);
+}
+
+/*Начальные экранные утилиты*/
+
+.esim{
+  color: rgba(255, 255, 255, 0.555);
+  font-weight:bolder;
+
+  position: absolute;
+  left: 20px;
+  top: 11px;
+}
+
+.poloca{
+  width: 45px;
+  height: 2px;
+  background: #ffffff8a;
+
+  position: absolute;
+  top: 33px;
+  left: 200px;
+}
+
+.time{
+  color: rgba(255, 255, 255, 0.521);
+  position: absolute;
+  left: 15%;
+  top: 1%;
+  font-size: 80px;
+  font-weight: 5;
+}
+
+.buttonTg{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+
+  color: azure;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 520px;
+  left: 30px;
+}
+.buttonTg:active{
+  transform: scale(1.2);
+}
+
+.buttonCm{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+
+  color: azure;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 520px;
+  left: 215px;
+}
+.buttonCm:active{
+  transform: scale(1.2);
+}
+
+
+
+.start-menu, .one-menu {
+  transition: all 0.5s ease-in-out;
+}
+
+.start-menu.hidden {
+  opacity: 0;
+  transform: translateY(-500px);
+  visibility: hidden;
+}
+
+.start-menu.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.one-menu.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  visibility: hidden;
+}
+
+.one-menu.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.swipe-button {
+  width: 100px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.897);
+  border-radius: 12px;
+  position: absolute;
+  top: 576px;
+  left: 91px;
+  z-index: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swipe-button:active {
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Утилиты главного экрана у сифона */
+.times{
+  font-size: 15px;
+  color: rgba(240, 255, 255, 0.774);
+  position: absolute;
+  left: 30px;
+  cursor: pointer;
+}
+
+.down-element{
+  width: 260px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+  border-radius: 24px;
+
+  position: absolute;
+  left: 10px;
+  top: 520px;
+
+}
+
+
+/* Панель нижняя */
+.down-app{
+  display: flex;
+  position: absolute;
+  top: 2.5px;
+  left: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 18px;
+}
+
+.phone-app{
+  width: 50px;
+  height: 50px;
+
+  background-image: url("../icons/phone-app.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.browser-app{
+  width: 50px;
+  height: 50px;
+  margin-left: 13px;
+
+  background-image: url("../icons/browser-app.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.messanger-app{
+  width: 50px;
+  height: 50px;
+  margin-left: 13px;
+
+  background-image: url("../icons/messanger-app.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.music-app{
+  width: 50px;
+  height: 50px;
+  margin-left: 13px;
+
+  background-image: url("../icons/music-app.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/*Другое */
+
+.El-search{
+width: 55px;
+height: 20px;
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+border: 1px solid rgba(255, 255, 255, 0.18);
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+
+color: #ffffff;
+font-size: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+position: absolute;
+top: 460px;
+left: 112px;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+font-smooth: always;
+}
+
+.El-search:active{
+  transform: scale(1.1);
+}
